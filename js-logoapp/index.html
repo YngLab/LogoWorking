@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title>キッズプラザ</title>
+	<style type="text/css">
+		#canvasContainer01,
+		#canvasContainer02 {
+			border: 1px solid #999;
+		}
+		#canvasContainer01 { width: 500px; height: 500px;}
+		#canvasContainer02 { margin-top: 20px; width: 500px; height: 100px;}
+		.myform {margin-top: 20px;}
+	</style>
+	<script src="data.js"></script>
+	<script src="js.js"></script>
+
+</head>
+<body onload="init()">
+	<div id="outer">
+	<div id="canvasContainer01">
+	<canvas id="mainCanvas" width="500" height="500"></canvas>
+	</div>
+	<div id="canvasContainer02">
+	<canvas id="previewCanvas" width="500" height="100"></canvas>
+	</div>
+	<form class="myform" name="myform"><input size="60" type="text" name="mytext"></form>
+	</div>
+</body>
+</html>
