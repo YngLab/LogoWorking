@@ -4,27 +4,179 @@
 	<meta charset="utf-8">
 	<title>キッズプラザ</title>
 	<style type="text/css">
-		#canvasContainer01,
-		#canvasContainer02 {
+
+	/*
+		.topBlock,
+		.bottomBlock,
+	*/
+		.helpButton,
+		.mainBlock,
+		.buttonBlockFirst,
+		.buttonBlock,
+		.previewCanvas
+		{
 			border: 1px solid #999;
 		}
-		#canvasContainer01 { width: 500px; height: 500px;}
-		#canvasContainer02 { margin-top: 20px; width: 500px; height: 100px;}
-		.myform {margin-top: 20px;}
+		.appContainer,
+		.appBlock,
+		.appTitle,
+		.helpBlock,
+		.previewContainer,
+		.previewArea,
+		.previewBlockFirst,
+		.previewBlock,
+		.mainContainer,
+		.buttonContainer,
+		.buttonArea
+		{
+			border: 0px solid #ccc;
+		}
+
+		.appContainer {
+			margin-top: 100px;
+			margin-left: 10px;
+			margin-right: 10px;
+			height: 740px;
+			min-width: 790px;
+		}
+		.appBlock {
+			margin: auto;
+			width: 860px;
+			height: 780px;
+		}
+		.topBlock {
+			height: 80px;
+		}
+		.bottomBlock {
+			height: 650px;
+		}
+		.appTitle {float: left; width: 700px;}
+		.helpBlock {float: left; width: 100px; height: 75px; position: relative;}
+		.helpButton { width: 70px; height: 70px;
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			margin: auto;
+		}
+		.previewContainer {float:left; width: 80px; height: 620px; position: relative;}
+		.previewArea {width: 80px; height: 602px;
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			margin: auto;
+		}
+		.previewBlockFirst {width: 78px; height: 65px;margin: auto; margin-top: 2px;}
+		.previewBlock {width: 78px; height: 65px; margin: auto; margin-top: 11px;}
+		.previewNumber {float: left; margin-top: 2px; font-size: 20px;font-weight: bold;}
+		.previewCanvas {float: left; margin-left: 2px;}
+		.mainContainer {float:left; width: 620px; height: 620px; position: relative;}
+		.mainBlock {width: 600px; height: 600px;
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			margin: auto;
+		}
+		.buttonContainer {
+			float:left;
+			width: 100px;
+			height: 620px;
+			position: relative;
+		}
+		.buttonArea {
+			width: 90px; height: 602px;
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			margin: auto;
+		}
+		.buttonBlockFirst {
+			width: 80px; height: 80px;margin: auto; margin-top: 1px;
+		}
+		.buttonBlock {
+			width: 80px; height: 80px;margin: auto; margin-top: 21px;
+		}
+
+		.myform input{margin-top: 40px;}
 	</style>
+
 	<script src="data.js"></script>
 	<script src="js.js"></script>
 
 </head>
 <body onload="init()">
-	<div id="outer">
-	<div id="canvasContainer01">
-	<canvas id="mainCanvas" width="500" height="500"></canvas>
+<div class="appContainer">
+	<div class="appBlock">
+		<div class="topBlock">
+			<div class="appTitle"><h1>ロゴアプリタイトル</h1></div>
+			<div class="helpBlock"><div class="helpButton"></div></div>
+		</div>
+		<div class="bottomBlock">
+
+			<div class="previewContainer">
+				<div class="previewArea">
+					<div class="previewBlockFirst">
+						<p class="previewNumber">1</p>
+						<canvas class="previewCanvas" id="previewCanvas1" width="62" height="62"></canvas>
+					</div>
+					<div class="previewBlock">
+						<p class="previewNumber">2</p>
+						<canvas class="previewCanvas" id="previewCanvas2" width="62" height="62"></canvas>
+					</div>
+					<div class="previewBlock">
+						<p class="previewNumber">3</p>
+						<canvas class="previewCanvas" id="previewCanvas3" width="62" height="62"></canvas>
+					</div>
+					<div class="previewBlock">
+						<p class="previewNumber">4</p>
+						<canvas class="previewCanvas" id="previewCanvas4" width="62" height="62"></canvas>
+					</div>
+					<div class="previewBlock">
+						<p class="previewNumber">5</p>
+						<canvas class="previewCanvas" id="previewCanvas5" width="62" height="62"></canvas>
+					</div>
+					<div class="previewBlock">
+						<p class="previewNumber">6</p>
+						<canvas class="previewCanvas" id="previewCanvas6" width="62" height="62"></canvas>
+					</div>
+					<div class="previewBlock">
+						<p class="previewNumber">7</p>
+						<canvas class="previewCanvas" id="previewCanvas7" width="62" height="62"></canvas>
+					</div>
+					<div class="previewBlock">
+						<p class="previewNumber">8</p>
+						<canvas class="previewCanvas" id="previewCanvas8" width="62" height="62"></canvas>
+					</div>
+				</div>
+			</div>
+			<div class="mainContainer">
+				<div class="mainBlock">
+					<canvas id="mainCanvas" width="600" height="600"></canvas>
+				</div>
+			</div>
+			<div class="buttonContainer">
+				<div class="buttonArea">
+					<div class="buttonBlockFirst">
+
+					</div>
+					<div class="buttonBlock">
+					
+					</div>
+					<div class="buttonBlock">
+					
+					</div>
+					<div class="buttonBlock">
+					
+					</div>
+					<div class="buttonBlock">
+					
+					</div>
+					<div class="buttonBlock">
+					
+					</div>
+
+				</div>
+			</div>
+		</div>
 	</div>
-	<div id="canvasContainer02">
-	<canvas id="previewCanvas" width="500" height="100"></canvas>
-	</div>
+</div>
+
+
 	<form class="myform" name="myform"><input size="60" type="text" name="mytext"></form>
-	</div>
 </body>
 </html>
