@@ -32,7 +32,11 @@ $result_rand = mysqli_query($link, "SELECT * FROM `Images` ORDER BY RAND()");//�
 		$i = 0;
 		while ($i < 10) {
 			$data = mysqli_fetch_array($result_desc);
-			echo $data['pass'];
+			if($data['pass'] == "image_test"){
+				echo "<img src=\"images/" .$data['id'] .".jpg\"><br>";
+			}else{
+				echo $data['pass'];
+			}
 			echo "<br>";
 			$i++;
 		}
@@ -46,6 +50,12 @@ $result_rand = mysqli_query($link, "SELECT * FROM `Images` ORDER BY RAND()");//�
 
 	ボタン制御(php)
 	<form action="post.php" method="post">
+		<input type="submit">
+	</form>
+
+	画像アップロード
+	<form action="post-image.php" method="post" enctype="multipart/form-data">
+		<input type="file" name="image">
 		<input type="submit">
 	</form>
 
