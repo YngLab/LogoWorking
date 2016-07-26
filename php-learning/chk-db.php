@@ -1,11 +1,5 @@
 <?php
-$url = "localhost";
-$user = "root";
-$pass = "root";
-$db = "image-site";
-
-$link = mysqli_connect($url,$user,$pass,$db) or die("MySQLへの接続に失敗しました。");
-$sdb = mysqli_select_db($link,$db) or die("データベースの選択に失敗しました。");
+require('set-db.php');
 $result = mysqli_query($link,"SELECT * FROM `Images` ORDER BY `id`");//登録順（古い順）用SQL
 $result_desc = mysqli_query($link,"SELECT * FROM `Images` ORDER BY `id` DESC");//新着順用SQL
 $result_rand = mysqli_query($link,"SELECT * FROM `Images` ORDER BY RAND()");//ランダム順用SQL
@@ -43,5 +37,11 @@ $result_rand = mysqli_query($link,"SELECT * FROM `Images` ORDER BY RAND()");//�
 		echo mysqli_fetch_array($result_rand)['pass'];//一回のみ表示
 	?>
 	<br><br>
+
+	ボタン制御(php)
+	<form action="post.php" method="post">
+		<input type="submit">
+	</form>
+
 </body>
 </html>
