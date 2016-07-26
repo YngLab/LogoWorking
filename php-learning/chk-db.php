@@ -18,17 +18,23 @@ $result_rand = mysqli_query($link, "SELECT * FROM `Images` ORDER BY RAND()");//�
 	データベース内情報の出力：<br><br>
 	昇順：<br>
 	<?
-		while ($data = mysqli_fetch_array($result)) {//あるだけ表示（書き換えれば個数指定可能）
+		$i = 0;
+		while ($i < 10) {//あるだけ表示（書き換えれば個数指定可能）
+			$data = mysqli_fetch_array($result);
 			echo $data['pass'];
 			echo "<br>";
+			$i++;
 		}
 	?>
 	<br><br>
 	降順：<br>
 	<?
-		while ($data = mysqli_fetch_array($result_desc)) {
+		$i = 0;
+		while ($i < 10) {
+			$data = mysqli_fetch_array($result_desc);
 			echo $data['pass'];
 			echo "<br>";
+			$i++;
 		}
 	?>
 	<br><br>
