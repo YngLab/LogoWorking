@@ -43,5 +43,11 @@ $result_rand = mysqli_query($link, "SELECT * FROM `Images` ORDER BY RAND()");//�
 		<input type="submit">
 	</form>
 
+	画像アップロード
+	<form action="post-image.php" method="post">
+		<input type="file" name="image">
+		<input type="submit">
+	</form>
+
 </body>
 </html>
