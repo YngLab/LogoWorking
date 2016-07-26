@@ -1,8 +1,8 @@
 <?php
 require('set-db.php');
-$result = mysqli_query($link,"SELECT * FROM `Images` ORDER BY `id`");//登録順（古い順）用SQL
-$result_desc = mysqli_query($link,"SELECT * FROM `Images` ORDER BY `id` DESC");//新着順用SQL
-$result_rand = mysqli_query($link,"SELECT * FROM `Images` ORDER BY RAND()");//ランダム順用SQL
+$result = mysqli_query($link, "SELECT * FROM `Images` ORDER BY `id`");//登録順（古い順）用SQL
+$result_desc = mysqli_query($link, "SELECT * FROM `Images` ORDER BY `id` DESC");//新着順用SQL
+$result_rand = mysqli_query($link, "SELECT * FROM `Images` ORDER BY RAND()");//ランダム順用SQL
 
 
 ?>
@@ -13,7 +13,7 @@ $result_rand = mysqli_query($link,"SELECT * FROM `Images` ORDER BY RAND()");//�
 	<title></title>
 </head>
 <body>
-	接続ID確立 <? mysqli_connect($url,$user,$pass,$db) or die("MySQLへの接続に失敗しました。"); ?><br />
+	接続ID確立 <? mysqli_connect($url, $user, $pass, $db) or die("MySQLへの接続に失敗しました。"); ?><br />
 	選択の成否:<?if($sdb) echo "True"; else echo "False"; ?><br />
 	データベース内情報の出力：<br><br>
 	昇順：<br>
