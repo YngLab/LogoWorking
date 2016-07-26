@@ -1,4 +1,4 @@
 linter:
   code_sniffer:
     options:
-    	tabIndent: true
+        standard: CakePHP
